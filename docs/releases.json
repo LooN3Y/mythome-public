@@ -1,0 +1,122 @@
+[
+  {
+    "tag": "v0.2",
+    "date": "2025-07-14",
+    "title": "Initial commit: Mythos v0.2"
+  },
+  {
+    "tag": "v0.2.1",
+    "date": "2025-07-14",
+    "title": "🔐 v0.2.1 - Email verification enforced, Discord unlink API, UX fixes"
+  },
+  {
+    "tag": "v0.2.2",
+    "date": "2025-07-14",
+    "title": "🔄 v0.2.2 – Parallax landing page, sidebar login/logout, session-aware UI"
+  },
+  {
+    "tag": "v.0.2.3",
+    "date": "2025-07-16",
+    "title": "v0.2.3 : Game DB sync"
+  },
+  {
+    "tag": "v0.2.3-dashboard-code-refactor",
+    "date": "2025-07-16",
+    "title": "Code Refactor dashboard modularisation"
+  },
+  {
+    "tag": "v0.2.4",
+    "date": "2025-07-17",
+    "title": "v0.2.4 - Modular code refactor, test accounts"
+  },
+  {
+    "tag": "v0.2.5",
+    "date": "2025-07-18",
+    "title": "v0.2.5 - Postgress, steam link"
+  },
+  {
+    "tag": "v0.2.6",
+    "date": "2025-07-19",
+    "title": "v0.2.6 provider links modular refactor, Youtube"
+  },
+  {
+    "tag": "v0.3.0",
+    "date": "2025-07-21",
+    "title": "v0.3.0 - EVE SSO, toon linking modals"
+  },
+  {
+    "tag": "v0.3.1",
+    "date": "2025-07-22",
+    "title": "v0.3.1 - Toon management, SWR integration"
+  },
+  {
+    "tag": "v0.2.3",
+    "date": "2025-07-23",
+    "title": "v0.3.2 - Eve Scope structure, security"
+  },
+  {
+    "tag": "v0.3.3",
+    "date": "2025-07-27",
+    "title": "v0.3.3 - Sync scafold, ESI optimization"
+  },
+  {
+    "tag": "v0.3.4",
+    "date": "2025-07-27",
+    "title": "v0.3.4 Pages structure, new components"
+  },
+  {
+    "tag": "v0.4.0",
+    "date": "2025-07-28",
+    "title": "v0.4.0 - Admin pannel"
+  },
+  {
+    "tag": "v0.4.1",
+    "date": "2025-07-29",
+    "title": "v0.4.1 - Admin Games management tools"
+  },
+  {
+    "tag": "v0.4.2",
+    "date": "2025-08-01",
+    "title": "v0.4.2 - Admin tools"
+  },
+  {
+    "tag": "v0.4.3",
+    "date": "2025-08-04",
+    "title": "v0.4.3 Full SWR migration Complete, user update added"
+  },
+  {
+    "tag": "v0.4.4",
+    "date": "2025-08-08",
+    "title": "v0.4.4 - Game Logs tab, Log Calls and improvements"
+  },
+  {
+    "tag": "v0.4.5",
+    "date": "2025-08-10",
+    "title": "v0.4.5 - Sockets working scaffold"
+  },
+  {
+    "tag": "v0.4.6",
+    "date": "2025-08-12",
+    "title": "v0.4.6 - Socket system stability enhancements"
+  },
+  {
+    "tag": "v0.4.7",
+    "date": "2025-08-13",
+    "title": "v0.4.7 - Socket upgrades and admin controls"
+  },
+  {
+    "tag": "v0.4.7.1",
+    "date": "2025-08-21",
+    "title": "v0.4.7.1 - Scope-sets migration, ESI"
+  },
+  {
+    "tag": "v0.4.7.2",
+    "date": "2025-08-26",
+    "title": "v0.4.7.2 - Eve applications flow - SSO/ESI upgrades"
+  },
+  {
+    "tag": "v0.4.7.3",
+    "date": "2025-08-27",
+    "title": "v0.4.7.3 - Public git tracking repo, page and workflow"
+  }
+]

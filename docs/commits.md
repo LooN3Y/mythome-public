@@ -1,3 +1,5 @@
+- 2025-08-27 939dd7f v0.4.7.3 - Public git tracking repo, page and workflow (LooNeY)
+- 2025-08-27 f409bce Update publish-public-docs.yml (LooN3Y)
 - 2025-08-27 8aacb5d Rename changelog-0472.md to CHANGELOG.md (LooN3Y)
 - 2025-08-27 4335f69 Update and rename publish-public-docs.yml to tmp.txt (LooN3Y)
 - 2025-08-27 5dc02c5 Update publish-public-docs.yml (LooN3Y)
