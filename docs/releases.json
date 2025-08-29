@@ -118,5 +118,10 @@
     "tag": "v0.4.7.3",
     "date": "2025-08-27",
     "title": "v0.4.7.3 - Public git tracking repo, page and workflow"
+  },
+  {
+    "tag": "v0.4.7.4",
+    "date": "2025-08-29",
+    "title": "v0.4.7.4 - EVE toon dynamic page, wallet, contracts, market)"
   }
 ]
