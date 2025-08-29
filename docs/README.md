@@ -5,7 +5,12 @@ A modular hub for multi-game communities — with SSO integration, character man
 
 ---
 
-## 🌐 Core Features
+## 🌐 Working Features
+
+### 👤 Character dynamic page (v0.4.7.4)
+- wallet overview, history, deltas
+- Contracts tab, history
+- Market overview, history, deltas
 
 ### 🔐 Auth & Identity
 - Secure email/username login via NextAuth

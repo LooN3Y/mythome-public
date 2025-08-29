@@ -1,3 +1,4 @@
+- 2025-08-29 a79d422 v0.4.7.4 - EVE toon dynamic page, wallet, contracts, market) (LooNeY)
 - 2025-08-27 939dd7f v0.4.7.3 - Public git tracking repo, page and workflow (LooNeY)
 - 2025-08-27 f409bce Update publish-public-docs.yml (LooN3Y)
 - 2025-08-27 8aacb5d Rename changelog-0472.md to CHANGELOG.md (LooN3Y)
