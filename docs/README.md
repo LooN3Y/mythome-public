@@ -1,4 +1,4 @@
-# Mythos Community v0.4.7
+# Mythos Community v0.4.7.5
 
 🚀 **Project Summary**  
 A modular hub for multi-game communities — with SSO integration, character management, rank-based access, and cross-platform linking. Built using Next.js, Tailwind CSS, Prisma, and NextAuth.
@@ -7,10 +7,9 @@ A modular hub for multi-game communities — with SSO integration, character man
 
 ## 🌐 Working Features
 
-### 👤 Character dynamic page (v0.4.7.4)
-- wallet overview, history, deltas
-- Contracts tab, history
-- Market overview, history, deltas
+### 👤 User Economy dynamic page (v0.4.7.5)
+- Tabs: Wallet, Market, Contracts, Industry, Mining, Assets.
+- Overview, history, stats, deltas
 
 ### 🔐 Auth & Identity
 - Secure email/username login via NextAuth

@@ -1,34 +1,53 @@
-## [0.4.7.3] — 2025-08-29
+## [0.4.7.4] — 2025-08-29
 
-### Added in character page:
-- **Contracts tab** improvements:
-  - Row expander (“Show info”) with **Financials + Items** for each contract.
-  - Sticky **“Hide info”** control that appears **only after scrolling** the expanded section.
-  - Clicking **“Show info”** now **scrolls/focuses** to the expanded section.
-- **Item names** for contract contents
-- **Wallet → Overview** enhancements:
-  - Timeframe dropdown (1d/1w/1m/1y) with delta display.
-  - Scrollable transactions list (shows 20, then scroll).
-  - Filters: **market**, **contracts**, **pve** (checkboxes).
-  - Small search bar (type/status/title).
-  - Clickable date to restore timeframe snapshot.
+### Added EVE user economy page
+- **Economy** page functionality:
+  - Wallet, Market, Contracts, Industry, Mining, Assets tabs functional
+  - Single / Combined modes for each tab
+  - Individual filters
+- **Wallet Tab**
+  - Wallet functionality migrated
+  - Shared hooks: useWalletSingle, useWalletCombined; helpers like fmtISK, wallet category tagging.
+  - Fixed hooks ordering / SWR key guards when toggling Single ↔ Combined.
+- **Market Tab**
+  - Rebuilt MarketTab using three sub-tabs: Active Orders, Completed Orders, Stats.
+  - Per-list filters: buy/sell, search, timeframe (independent per list).
+  - Stats has its own timeframe and shows counts plus ISK sums (sell, buy, Δ).
+  - UI polish: aligned stat card + timeframe; pagination resets on tab switch.
+  - Item names now provided server-side for both active and completed orders.
+- **Contracts Tab**
+  - New ContractsTab with sub-tabs: Active, Completed, Stats.
+  - Stats: timeframe selector (defaults to All) with totals: count, completed count, incoming ISK (sells), outgoing ISK (buys), and Δ.
+  - Row emphasis uses text color only (no colored glyphs), so copy/paste stays clean.
+  - Stability fixes (toon lookup, hook order).
+- **Industry Tab**
+  - New IndustryTab with Active Jobs, Job History, Stats.
+  - Client-side filters: search, activity, status, timeframe; plus pagination.
+  - Helpers added: timeframeToSinceMs, isIndustryCompleted, isIndustryActive.
+  - Names attached where available for blueprints/products.
+- **Mining Tab**
+  - New MiningTab with Overview, Ledger, Stats.
+  - Shows ore totals, per-ore breakdowns, timeframe controls (charts placeholder ready).
+  - Supports combined summaries across selected characters.
+- **Assets Tab**
+  - New AssetsTab (single + combined).
+  - Client filters: structure multi-select (by location_id), search, sort (value/name/qty/location), pagination.
+  - Summary cards: Total Value (All) vs Filtered Value, item count, distinct types.
+  - Toggle: Include blueprints — when off, blueprints are hidden and excluded from totals.
+  - Item names + unit prices (average→adjusted) attached server-side; totals computed client-side.
 
 ### Changed
-- **Contract history** now sorts **newest first** (by `dateIssued`).
-- **Reward/Price** column logic:
-  - `courier` → **reward**
-  - `item_exchange` → **price**
-  - `auction` → **buyout** (fallback: price)
-  - Otherwise: first finite of reward/price/buyout.
+- Skills tab removed from economy page.
 
 ### Fixed
-- Details fetch now uses the existing route  
-- Correctly renders ISK amounts even if upstream provides numeric strings.
+  - Guarded SWR keys & memo deps to eliminate “Rendered more hooks than during the previous render” and undefined key crashes on mode switches.
+  - Correct toon-selection flow when switching between Single and Combined modes.
 
 ### API
-- `src/pages/api/games/eve/esi/eveToonContracts.ts`
-  - Added `section=items` to return contract items; gated by **`contracts:character`**.
-  - Enriches items with `itemName` via `attachItemNames()` (from seeded JSON).
-  - Diagnostic headers: `X-ESI-Status`, `X-Character-Id`, `X-Contract-Id`, `X-Type-Names-Resolved`.
-- `src/pages/api/games/eve/esi/eveToonWalletTxs.ts`
-  - Provides wallet deltas + transactions with timeframe support (used by Wallet Overview).
+  - Added
+      - src/pages/api/games/eve/esi/eveToonIndustryJobs.ts — returns active + completed jobs; dataset industry:character:jobs; name enrichment.
+      - src/pages/api/games/eve/esi/eveToonMiningLedger.ts — returns character mining ledger; dataset mining:character.
+      - src/pages/api/games/eve/esi/eveToonAssets.ts — returns all character assets (multi-page), attaches itemName and unitPrice from CCP /markets/prices (average→adjusted), plus totalValue; dataset assets:character.
+  - Updated
+      - src/pages/api/games/eve/esi/eveToonMarketOrders.ts — always attaches itemName; supports history=1 for completed orders; cache/diagnostic headers remain.
+      - src/pages/api/games/eve/esi/eveToonContracts.ts — (from 0.4.7.4) list + section=items for details with attachItemNames().

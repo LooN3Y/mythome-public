@@ -123,5 +123,10 @@
     "tag": "v0.4.7.4",
     "date": "2025-08-29",
     "title": "v0.4.7.4 - EVE toon dynamic page, wallet, contracts, market)"
+  },
+  {
+    "tag": "v0.4.7.5",
+    "date": "2025-09-03",
+    "title": "v0.4.7.5: User economy page with functionality"
   }
 ]
