@@ -128,5 +128,10 @@
     "tag": "v0.4.7.5",
     "date": "2025-09-03",
     "title": "v0.4.7.5: User economy page with functionality"
+  },
+  {
+    "tag": "v0.4.7.6",
+    "date": "2025-09-08",
+    "title": "v0.4.7.6 - Redis. Queues, repeatables, cache."
   }
 ]

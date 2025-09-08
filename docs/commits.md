@@ -1,3 +1,7 @@
+- 2025-09-08 9981f05 v0.4.7.6 - Redis. Queues, repeatables, cache. (LooNeY)
+- 2025-09-08 162fc87 Working Redis (basic) (LooNeY)
+- 2025-09-05 328453d Corp apps management (LooNeY)
+- 2025-09-05 e6a49e3 Working corp management overview (LooNeY)
 - 2025-09-03 5f9ec57 v0.4.7.5: User economy page with functionality (LooNeY)
 - 2025-09-01 7bc758a EVE user data management pages (LooNeY)
 - 2025-08-29 a79d422 v0.4.7.4 - EVE toon dynamic page, wallet, contracts, market) (LooNeY)
