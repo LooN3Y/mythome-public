@@ -133,5 +133,10 @@
     "tag": "v0.4.7.6",
     "date": "2025-09-08",
     "title": "v0.4.7.6 - Redis. Queues, repeatables, cache."
+  },
+  {
+    "tag": "v0.4.7.7",
+    "date": "2025-09-15",
+    "title": "v0.4.7.7 - Corp Wallet Management tab"
   }
 ]
