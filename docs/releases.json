@@ -138,5 +138,10 @@
     "tag": "v0.4.7.7",
     "date": "2025-09-15",
     "title": "v0.4.7.7 - Corp Wallet Management tab"
+  },
+  {
+    "tag": "v0.4.7.8",
+    "date": "2025-09-21",
+    "title": "v0.4.7.8 - Redis, Eve management, applications, SRP"
   }
 ]

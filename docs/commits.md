@@ -1,3 +1,4 @@
+- 2025-09-21 6c0b2a9 v0.4.7.8 - Redis, Eve management, applications, SRP (LooNeY)
 - 2025-09-15 d48686e v0.4.7.7 - Corp Wallet Management tab (LooNeY)
 - 2025-09-08 9981f05 v0.4.7.6 - Redis. Queues, repeatables, cache. (LooNeY)
 - 2025-09-08 162fc87 Working Redis (basic) (LooNeY)
