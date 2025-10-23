@@ -1,3 +1,65 @@
+## [0.5.0] — 2025-01-XX
+
+### Added
+- **EVE Application Management System**: Complete leadership audit interface with section-by-section review, visual status indicators, and full workflow management (Submit → Under Review → Accept/Reject)
+- **EVE Corporation Wallet System**: New wallet management for leadership including divisions, balance snapshots, transactions, and journal entries
+- **Application Resubmission Support**: Applicants can address rejected sections and resubmit while maintaining review status
+- **Auditor Notes System**: Leadership can add review notes visible to applicants during the review process
+- **Application History & Reopen**: Complete view of decided applications with ability to reopen for re-evaluation
+- **Form Question Templates**: Dynamic form rendering from JSON templates with leadership-editable question sets
+
+### Changed
+- **Application Progress Calculation**: Fixed progress calculation discrepancies between client and server
+- **Section State Management**: Enhanced tracking with auditor information and timestamps
+- **UI/UX Improvements**: Streamlined application management interface with better visual feedback
+
+### Fixed
+- **Resubmission Logic**: Applications can now be resubmitted when sections are rejected
+- **Form Data Persistence**: Fixed form question labels storage in database
+- **Real-time Updates**: Proper SWR configuration for live updates between applicant and auditor views
+- **TypeScript Errors**: Resolved various type safety issues in application management components
+
+### API
+- **Added**: `manageApplication.ts` — Unified API for application management actions
+- **Added**: `eve-apps-qs-template.json` — JSON template for dynamic form rendering
+- **Added**: Corporation wallet APIs (`localCorpWalletTxs.ts`, `localCorpWalletDivisions.ts`, `localCorpWalletBalances.ts`, `localCorpWalletJournal.ts`)
+- **Updated**: Application submission and management APIs with enhanced functionality
+
+## [0.4.7.9] — 2025-01-XX
+
+### Added EVE Application Management System
+- **Leadership Audit Interface**: Comprehensive application review system for corp leadership.
+- **Section-by-Section Review**: Individual approval/rejection of application sections (Characters and Scopes, Application Form, Verification, Skills, Killboard).
+- **Visual Status Indicators**: Color-coded section status badges with auditor information and decision timestamps.
+- **Application Workflow Management**: Complete workflow from Submit → Under Review → Accept/Reject with full audit trail.
+- **Resubmission Support**: Applicants can address rejected sections and resubmit while maintaining UNDER_REVIEW status.
+- **Auditor Notes System**: Leadership can add review notes that are visible to applicants during the review process.
+- **Application History Tracking**: Complete view of accepted/rejected applications with decision dates and auditor information.
+- **Reopen Functionality**: Leadership can reopen decided applications (ACCEPTED/REJECTED) for re-evaluation.
+- **Real-time Updates**: Live status updates between applicant and auditor perspectives using SWR refresh intervals.
+- **Enhanced Bootcamp Tab**: Added decided applications section with search and filtering capabilities.
+- **Form Question Templates**: Dynamic form rendering from JSON templates with leadership-editable question sets.
+- **Unified Data Structure**: Refactored form storage to use unified question/answer arrays with backward compatibility.
+
+### Changed
+- **Application Progress Calculation**: Fixed progress calculation discrepancies between client and server for resubmission scenarios.
+- **Section State Management**: Enhanced section state tracking with auditor information and timestamps.
+- **UI/UX Improvements**: Streamlined application management interface with better visual feedback and status indicators.
+
+### Fixed
+- **Resubmission Logic**: Applications can now be resubmitted when sections are rejected, regardless of progress percentage.
+- **Form Data Persistence**: Fixed form question labels not being stored correctly in the database.
+- **Real-time Updates**: Implemented proper SWR configuration for live updates between applicant and auditor views.
+- **TypeScript Errors**: Resolved various type safety issues in application management components.
+
+### API
+- **Added**
+  - `src/pages/api/games/eve/management/manageApplication.ts` — Unified API for all application management actions (approve/reject sections, add notes, reopen applications).
+  - `src/data/eve-apps-qs-template.json` — JSON template for dynamic form question rendering.
+- **Updated**
+  - `src/pages/api/games/eve/applications/submitUserApplication.ts` — Added resubmission support with isResubmission flag.
+  - `src/pages/api/games/eve/management/applications.ts` — Enhanced to include auditor information in responses.
+
 ## [0.4.7.4] — 2025-08-29
 
 ### Added EVE user economy page
@@ -40,7 +102,7 @@
 - Skills tab removed from economy page.
 
 ### Fixed
-  - Guarded SWR keys & memo deps to eliminate “Rendered more hooks than during the previous render” and undefined key crashes on mode switches.
+  - Guarded SWR keys & memo deps to eliminate "Rendered more hooks than during the previous render" and undefined key crashes on mode switches.
   - Correct toon-selection flow when switching between Single and Combined modes.
 
 ### API

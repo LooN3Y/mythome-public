@@ -1,3 +1,4 @@
+- 2025-10-23 f68bd86 v0.5.0 - inMemory cache, Redis optimization (LooNeY)
 - 2025-10-09 e338636 v0.4.7.9 - EVE srp, applications 99% working (LooNeY)
 - 2025-09-21 6c0b2a9 v0.4.7.8 - Redis, Eve management, applications, SRP (LooNeY)
 - 2025-09-15 d48686e v0.4.7.7 - Corp Wallet Management tab (LooNeY)

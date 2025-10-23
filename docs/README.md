@@ -1,4 +1,12 @@
-# Mythos Community v0.4.7.5
+# Mythos Community v0.5.0
+
+## 📖 About This Project
+
+**Mythos Community** is a comprehensive gaming community platform designed to bring together players across multiple games under one unified hub. Built specifically for the Mythos gaming community, this platform provides seamless integration with popular games like EVE Online, offering character management, application systems, and real-time community features.
+
+The platform serves as a central hub where community members can manage their gaming identities, apply to join corporation activities, and access game-specific tools and information. With a focus on EVE Online integration, it provides everything from character linking and economy tracking to corporation application management and leadership tools.
+
+---
 
 🚀 **Project Summary**  
 A modular hub for multi-game communities — with SSO integration, character management, rank-based access, and cross-platform linking. Built using Next.js, Tailwind CSS, Prisma, and NextAuth.
@@ -7,14 +15,10 @@ A modular hub for multi-game communities — with SSO integration, character man
 
 ## 🌐 Working Features
 
-### 👤 User Economy dynamic page (v0.4.7.5)
-- Tabs: Wallet, Market, Contracts, Industry, Mining, Assets.
-- Overview, history, stats, deltas
-
-### 🔐 Auth & Identity
+### 🔐 Authentication & Identity
 - Secure email/username login via NextAuth
 - JWT-based sessions with real-time status
-- OAuth linking for Discord, Steam, YouTube (more coming)
+- OAuth linking for Discord, Steam, YouTube
 - Role-aware profile with linked account indicators
 
 ### 👤 Member Dashboard & Profile
@@ -29,68 +33,70 @@ A modular hub for multi-game communities — with SSO integration, character man
 - Character summary block with sync info
 - Rank-based visibility for corp/private tools
 
-### 🧰 EVE Access (scope-sets) — since v0.4.7
-- **Set-centric grants:** Each toon stores a single `grantedScopeSetId` (default **`eveplayer`**).
-- **Rank-aware requirements:** The **highest** `GameRank.level` you hold defines the **required** set(s).
-- **Corp-only check:** At least one **corp toon** must grant a required (or higher-level) set.
-- **Smart warning:** Characters page warns on:
-  - `NO_TOONS` (you have requirements but no linked toons),
-  - `NO_CORP_TOONS` (no linked toon in our corp),
-  - `MISSING_SET` (corp toon(s) exist, but none grant the top-level set).
-- **Over-granting:** Granting a **higher-level** set also satisfies requirements; UI shows a small FYI.
+### 💰 EVE User Economy (v0.4.7.4)
+- **Wallet Tab**: Personal wallet transactions and balance tracking
+- **Market Tab**: Active orders, completed orders, and trading stats
+- **Contracts Tab**: Active contracts, completed contracts, and contract stats
+- **Industry Tab**: Active jobs, job history, and industry statistics
+- **Mining Tab**: Mining overview, ledger, and ore statistics
+- **Assets Tab**: Asset management with value tracking and filtering
+- Single/Combined modes for all tabs with individual filters
 
-### 🪐 EVE Operations Hub (`/games/eve-online`)
-- Public info + lore, killboard section (placeholder)
-- Discord + Forum callouts
-- Logged-in users see toon summary + corp content
-- Leadership access panel (for directors, CEOs)
+### 📝 EVE Corporation Applications (v0.4.7.2)
+- Draft → Review → Submit application flow
+- Section-based progress with readiness checks
+- Discord verification requirement
+- Main toon selection and persistence
+- Save draft functionality with form state preservation
 
-### 📝 EVE Corp Applications — since v0.4.7.2
-- Draft → Review → Submit flow on the application detail page.
-- **Section-based progress** (weighted) with readiness checks; includes a **Discord** requirement.
-- **Discord verification subsection**: shows linked state, username, and avatar; prompts to link via **/profile** if missing.
-- **Main Toon** selection persists; the toon’s name appears on the detail page and in the applications list.
-- **Save Draft / Save Changes** preserves answers and section states.
-- **Submit Application**.
-- Locked UX: form save is blocked with a clear alert; submit button disabled on non-DRAFT apps.
+### 🎯 EVE Application Management (v0.5.0)
+- **Leadership Audit System**: Complete application review interface
+- **Section-by-Section Review**: Individual approval/rejection of application sections
+- **Visual Status Indicators**: Color-coded status with auditor information
+- **Application Workflow**: Submit → Under Review → Accept/Reject with audit trail
+- **Resubmission Support**: Address rejected sections and resubmit
+- **Auditor Notes**: Leadership can add review notes visible to applicants
+- **Application History**: Complete view of decided applications
+- **Reopen Functionality**: Reopen decided applications for re-evaluation
+- **Real-time Updates**: Live status updates between applicant and auditor views
 
+### 💼 EVE Corporation Wallet Management (v0.5.0)
+- **Wallet Divisions**: Corporation wallet division management
+- **Balance Tracking**: Historical balance snapshots with timestamps
+- **Transaction History**: Detailed wallet transaction logging
+- **Journal Entries**: Comprehensive wallet journal with ref types
+- **Leadership-Only Access**: Protected by rank guards for corp leadership
 
+### 🪐 EVE Operations Hub
+- Public info and lore sections
+- Discord and Forum integration
+- Logged-in users see toon summary and corp content
+- Leadership access panel for directors and CEOs
 
-### 🎛️ Admin Panel Overhaul (`/admin`)
-- Fully tabbed system: Users, System, Games, Logs, DB
-- User Management:**
-- System Tab:**
-- Games Management (v0.4.1):
-- Database tools
+### 🎛️ Admin Panel
+- **User Management**: User administration and role management
+- **System Monitoring**: System health and performance metrics
+- **Games Management**: Game configuration and settings
+- **Log Viewer**: Application and game logs with timeframe filters
+- **Database Tools**: Database management and maintenance
 
-### 📊 Log Viewer
-- **Timeframe Filters**: 24h, 7d, 15d, 30d, current month (client-side filtering).
-- **Log Cleanup API**: Deletes all log entries; usable by cron or button.
-- Game related log tab (v0.4.4)
-
+### ⚡ Real-time Features
+- **Online Presence**: See who's online with green dot indicators
+- **Last Seen**: Display when users were last active
+- **Live Updates**: Status changes appear instantly without page refresh
+- **Multi-socket Support**: Session duration and multi-socket awareness
+- **Active Users**: Admin panel for monitoring active users
 
 ### 🌌 Landing Experience
 - Animated, parallax-scrolling landing page
-- Dot-nav to sections (About, Games, Join)
-- Games list loaded dynamically from DB
-
-
-##### ⚡ Real-time Presence (v0.4.5)
-- **See who’s online**: Member cards now show a green dot when a user is online.
-- **“Last seen”**: When someone is offline, you’ll see how long ago they were last active.
-- **Live updates**: Status changes appear instantly—no page refresh needed.
-- **Members-only**: Presence is visible only to logged-in members.
-- Session duration & multi-socket awareness (v0.4.7)
-- Admin panel "Active users tab" functionality
- - Multi-socket warnings
-
-
+- Dot-navigation to sections (About, Games, Join)
+- Games list loaded dynamically from database
 
 ---
 
 ## 🛠️ Tech Stack
 - **Frontend:** Next.js 15, React 19, Tailwind CSS, Framer Motion
-- **Backend:** TypeScript (Node.js runtime) with Prisma (TypeScript) talking to PostgreSQL.
+- **Backend:** TypeScript (Node.js runtime) with Prisma (TypeScript) talking to PostgreSQL
 - **Auth:** NextAuth (JWT), with modular provider support
 - **Infra:** `.env`-based config, modular API routes, REST endpoints
 
